@@ -1,23 +1,30 @@
 :root {
-    --background: rgb(224, 234, 247);
-    --header-background: white;
-    --footer-background: rgb(243, 242, 242);
+    --background: smokewhite;
+    --footer-background: plum;
 }
 
+
 body {
-    height: 100vh;
+    height: 120vh;
     font-family: 'Rubik', san-serif;
     background: var(--background);
     display: grid;
     grid-template-rows: auto 1fr auto;
+    position: relative;
+    
 }
 
+ 
 header {
-    position: sticky;
-    top: 0;
+    position: relative;
     display: flex;
     align-items: center;
-    background-color: var(--header-background);
+    justify-content: center;
+    background-color: plum;
+    color: white;
+    font-size: Medium;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
 }
 
 main {
@@ -32,4 +39,81 @@ footer {
     display: flex;
     justify-content: flex-end;
     background-color: var(--footer-background);
+    color: white;
 }
+
+#button {
+    margin: 10px;
+    margin-bottom: 15px;
+    color: smokewhite;
+    border: solid 2px plum;
+
+}
+
+#button:hover {
+    background-color: rgb(243, 235, 151);
+    transition: 0.2s;
+}
+
+.hidden {
+    display: none;
+}
+
+#question-section {
+    display: grid;
+    justify-items: center;
+    background-color: lightblue;
+    border: solid 6px lightpink;
+}
+
+#display-question {
+    display: grid;
+    height: 70px;
+    padding: 20px;
+    justify-items: center;
+    background-color: rgb(243, 234, 137);
+    border: solid 6px plum;
+
+}
+
+#ask {
+    align-items: center;
+    justify-content: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.answer {
+    display: grid;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+
+#answer-section {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+#display-answer {
+    z-index: 100;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    font-size: x-large;
+    grid-row: 2;
+    grid-column: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+    
+}
+
+.crystal-ball {
+    justify-content: center;
+    align-items: center;
+    grid-row: 2;
+    grid-column: 1;
+}
+
